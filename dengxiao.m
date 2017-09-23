@@ -1,0 +1,11 @@
+data=xlsread('I:\数学建模国赛真\data33.xls');
+a=data(:,1);
+b=data(:,2);
+c=xlsread('I:\数学建模国赛真\fujian22.xls');
+llat=c(:,1);%会员
+llon=c(:,2);
+ledu=c(:,4);%额度
+dengxiao1=zeros(1877,1);%人均等效
+R=24;
+di=zeros(835,1);
+dis=zeros(835,1);

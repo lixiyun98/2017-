@@ -1,0 +1,9 @@
+count=load('I:\数学建模国赛真\data1.txt');
+x1=count(:,1);x2=count(:,2);
+x3=count(:,3);x4=count(:,4);
+x5=count(:,5);
+la=xlsread('I:\数学建模国赛真\fujian1.xls');
+y=la(:,4);
+x=[ones(835,1),x1,x2,x3,x4,x5];
+[b,bint,r,rint,stats]=regress(y,x);
+stats

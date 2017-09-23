@@ -1,0 +1,24 @@
+b=[68.5318
+    0.0812
+    0.0859
+    0.1713
+   -0.8462
+   -0.0905];
+count=load('I:\数学建模国赛真\第二问\data2.txt');
+data1=load('I:\数学建模国赛真\第二问\xuandian.txt');
+y=count(:,6);
+x=count(:,7);
+x1=count(:,1);x2=count(:,2);
+x3=count(:,3);x4=count(:,4);
+x5=count(:,5);
+x6=count(:,7)
+x7=count(:,8)
+y0=b(1)+b(2)*x1+b(3)*x2+b(4)*x3+b(5)*x4+b(6)*x5;
+y1=b(1)+data1(:,4)*b(2)+data1(:,5)*b(3)+data1(:,6)*b(4)+data1(:,7)*b(5)+data1(:,8)*b(6);
+subplot(1,2,1)
+plot(x,y,'b-.',x,y0,'r-.',x,y1,'g-.')
+legend('原始数据','数据二','数据一','location','northwest')
+subplot(1,2,2)
+plot(x,y,'b.',x,y0,'r.',x,y1,'g.')
+a2=y1-y
+a3=y0-y
